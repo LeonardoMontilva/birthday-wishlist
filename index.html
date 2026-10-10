@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Wishlist de cumple ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/Nueva carpeta/pandita .png">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <filter id="heavy-crayon">
+            <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="4" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+            
+            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" result="vibe">
+                <animate attributeName="baseFrequency" dur="0.25s" values="0.6;0.68;0.52" repeatCount="indefinite" />
+            </feTurbulence>
+            <feDisplacementMap in="displaced" in2="vibe" scale="2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </defs>
+</svg>
+
+<div class="reveal-layer">
+    
+    <img src="/Nueva carpeta/PANDITA.png" alt="Panda Rojo" class="panda-peek panda-left-1">
+    <img src="/Nueva carpeta/pandita.png" alt="Panda Rojo" class="panda-peek panda-left-2">
+    <img src="/Nueva carpeta/pandita.png" alt="Panda Rojo" class="panda-peek panda-right-1">
+    <img src="/Nueva carpeta/pandita.png" alt="Panda Rojo" class="panda-peek panda-right-2">
+    <img src="/Nueva carpeta/pandita.png" alt="Panda Rojo" class="panda-peek panda-top-1">
+    <img src="/Nueva carpeta/pandita.png" alt="Panda Rojo" class="panda-peek panda-top-2">
+    <img src="/Nueva carpeta/pandita.png" alt="Panda Rojo" class="panda-peek panda-bottom-1">
+    <img src="/Nueva carpeta/pandita.png" alt="Panda Rojo" class="panda-peek panda-bottom-2">
+    
+    <div class="wishlist-content">
+        
+        <div class="glitter-container">
+            <span class="glitter spark-pink" style="top: 8%; left: 12%;">✨</span>
+            <span class="glitter spark-blue" style="top: 15%; right: 10%;">✨</span>
+            <span class="glitter spark-purple" style="top: 45%; left: 5%;">✨</span>
+            <span class="glitter spark-gold" style="top: 65%; right: 8%;">✨</span>
+            <span class="glitter spark-pink" style="bottom: 10%; left: 15%;">✨</span>
+            
+            <span class="cute-item float-slow" style="top: 25%; left: 4%;">🌼</span>
+            <span class="cute-item float-fast" style="top: 72%; left: 8%;">🌼</span>
+            <span class="cute-item float-medium" style="top: 30%; right: 5%;">🌼</span>
+            <span class="cute-item float-slow" style="bottom: 12%; right: 12%;">🌼</span>
+        </div>
+
+        <header class="main-header animate-pop">
+            <h1 class="main-title">WISH LIST</h1>
+            <p class="subtitle">★ GUÍA PARA HACERME EL REGALO PERFECTO ★</p>
+        </header>
+
+        <div class="center-section animate-bounce-slow">
+            <div class="id-card">
+                <div class="card-bg-crayon crayon-target"></div>
+                
+                <div class="card-inner-content">
+                    <div class="id-header">♡ IDENTITY CARD ♡</div>
+                    <div class="id-body">
+                       <div class="avatar-container">
+                            <div class="avatar-bg-crayon crayon-target"></div>
+                            <img src="/Nueva carpeta/foto1.webp" alt="Foto Betsabeth" class="avatar-photo">
+                        </div>
+                        <div class="id-info">
+                            <p>Name: Betzabeth</p>
+                            <p>Cumple: 27/07/2004</p>
+                            <p>Color fav: <span class="star-icon">★</span></p>
+                            <p>Hobby: Amo tocar guitarra</p>
+                        </div>
+                    </div>
+                    <div class="id-footer">✿ HAZ CLICK EN LAS SECCIONES ✿</div>
+                </div>
+            </div>
+            
+            <div class="arrow-draw crayon-target">
+                <div class="arrow-curve"></div>
+                <div class="arrow-head"></div>
+            </div>
+        </div>
+        
+        <div class="buttons-grid">
+            <button class="btn float-btn-1" onclick="openModal('infoModal')">
+                <div class="btn-bg-crayon btn-info crayon-target"></div>
+                <span class="btn-text">INFO</span>
+            </button>
+
+            <button class="btn float-btn-2" onclick="openModal('moodModal')">
+                <div class="btn-bg-crayon btn-moodboard crayon-target"></div>
+                <span class="btn-text">MOOD BOARD</span>
+            </button>
+
+            <button class="btn float-btn-3" onclick="openModal('dislikeModal')">
+                <div class="btn-bg-crayon btn-nogustaria crayon-target"></div>
+                <span class="btn-text">NO ME GUSTARÍA</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL INFO -->
+<div id="infoModal" class="modal-overlay">
+    <div class="modal-card">
+        <div class="modal-bg-crayon crayon-target"></div>
+        <div class="modal-inner">
+            <span class="close-btn" onclick="closeModal('infoModal')">&times;</span>
+            <div class="modal-header">✨ Datos Importantes ✨</div>
+            
+            <div class="modal-grid">
+                <div class="modal-column">
+                    <label class="check-item"><input type="checkbox" checked> <span>PLATA</span></label>
+                    <label class="check-item"><input type="checkbox" disabled> <span>ORO</span></label>
+                    <label class="check-item"><input type="checkbox" disabled> <span>MINIMALISTA</span></label>
+                    <label class="check-item"><input type="checkbox" checked> <span>MAXIMALISTA</span></label>
+                    <label class="check-item"><input type="checkbox" checked> <span>OVERSIZE</span></label>
+                    <label class="check-item"><input type="checkbox" disabled> <span>AJUSTADO</span></label>
+                </div>
+                <div class="modal-column">
+                    <label class="check-item"><input type="checkbox" checked> <span>DULCE</span></label>
+                    <label class="check-item"><input type="checkbox" checked> <span>SALADO</span></label>
+                    <label class="check-item"><input type="checkbox" checked> <span>ÚTIL</span></label>
+                    <label class="check-item"><input type="checkbox" checked> <span>BONITO</span></label>
+                    <label class="check-item"><input type="checkbox" disabled> <span>AVENTURA</span></label>
+                    <label class="check-item"><input type="checkbox" checked> <span>RELAX</span></label>
+                </div>
+            </div>
+            
+            <div class="modal-others">
+                <div class="others-title">OTROS: <span class="others-sub">(tallas, cosas fav, gustos)</span></div>
+                <p class="others-text">
+                    Mi color favorito es el azul, collares y anillos plateados, todo tipo de accesorios para cabello, ganchos, brochas, pulseras, bolsos, carteritas, los peluchitos, franelas, suéteres ( Mis tallas en camisetas/sueters: Talla M), algo relacionado con Zelda, the last of us, BTS, twenty one pilots, margaritas, Latin Mafia (Banda), Aurora (Cantante), Paramore (Banda), Aavatar la leyenda de Ang, Diarios de vampiros, Crepúsculo, Spider-Man ( Especificamente Miles Morales), The Flash, Spiderwick, los juegos del hambre, Amo los panda rojos, One piece ( Mejor si es Franky, mi personaje favorito) Little nightmares y todo Hollow knight, tambien los colores, pinturas, sketch de dibujo, las cartas, mis dulces preferidos son: Pavlova, Crepes de chocolate con fresa y cambur, Suspiros, Gomitas de fresa trululu, sundae de chocolate, al igual que la Pasta con salsa Bechamel, Bacon cheese de pollito, y la skillet de red velvet!.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="moodModal" class="modal-overlay">
+   <div class="modal-card">
+        <div class="modal-bg-crayon crayon-target"></div>
+        <div class="modal-inner">
+            
+            <button class="close-btn" onclick="closeModal('moodModal')">×</button>
+
+            <h2 style="text-align: center;">✨ Mood Board ✨</h2>
+
+            
+            <div class="pinterest-container">
+                <a href="https://pin.it/7BX0nq3y4" target="_blank" class="pinterest-btn">
+                    📌 Ver más ideas en mi Pinterest
+                </a>
+            </div>
+
+          
+            <div class="mood-gallery">
+                <img src="/Nueva carpeta/foto2.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto3.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto14.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto5.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto6.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto8.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto9.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto10.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto11.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto12.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto7.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto15.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto16.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto17.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto22.png" class="gallery-item">
+                <img src="/Nueva carpeta/foto19.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto20.webp" class="gallery-item">
+                <img src="/Nueva carpeta/foto21.webp" class="gallery-item">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- MODAL NO ME GUSTARÍA -->
+<div id="dislikeModal" class="modal-overlay">
+  <div class="modal-card">
+    <div class="modal-bg-crayon crayon-target"></div>
+    <div class="modal-inner">
+      <button class="close-btn" onclick="closeModal('dislikeModal')">×</button>
+      <h2 style="text-align: center;">❌ No me gustaría</h2>
+      <div class="dislike-grid">
+        <img src="/Nueva carpeta/nogusta1.webp" class="gallery-item">
+        <img src="/Nueva carpeta/nogusta2.webp" class="gallery-item">
+        <img src="/Nueva carpeta/nogusta3.webp" class="gallery-item">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function openModal(id) {
+    document.getElementById(id).classList.add('active');
+}
+
+function closeModal(id) {
+    document.getElementById(id).classList.remove('active');
+}
+
+
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal-overlay');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+}
+</script>
+
+</body>
+</html>
